@@ -1,0 +1,45 @@
+<div class="box-container">
+  <form class="poster-form" nz-form [formGroup]="posterForm">
+    <nz-form-item>
+      <nz-form-label [nzSpan]="7" nzRequired>左边空余宽度</nz-form-label>
+      <nz-form-control [nzSpan]="4" nzHasFeedback [nzErrorTip]="leftErrorTpl">
+        <nz-input-number formControlName="left" [nzPlaceHolder]="'请输入'"></nz-input-number>
+        <ng-template #leftErrorTpl let-control>
+          <ng-container *ngIf="control.hasError('required')">
+            请输入左边空余宽度
+          </ng-container>
+        </ng-template>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-label [nzSpan]="7" nzFor="name">海报名字</nz-form-label>
+      <nz-form-control [nzSpan]="4" [nzErrorTip]="errorTpl">
+        <input nz-input type="text" formControlName="name" id="name" placeholder="请输入" />
+        <ng-template #errorTpl let-control>
+          <ng-container *ngIf="control.hasError('required')">
+            请输入海报名字
+          </ng-container>
+          <ng-container *ngIf="control.hasError('confirm')">
+            最多输入{{maxLength}}个字符
+          </ng-container>
+        </ng-template>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-label [nzSpan]="7" nzFor="isShow" nzRequired>是否显示头像</nz-form-label>
+      <nz-form-control [nzSpan]="4" [nzErrorTip]="errorTpl">
+        <nz-switch formControlName="isShow"></nz-switch>
+        <ng-template #errorTpl let-control>
+          <ng-container *ngIf="control.hasError('required')">
+            请选择
+          </ng-container>
+        </ng-template>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control [nzSpan]="7" [nzOffset]="7">
+        <button nz-button nzType="primary" (click)="submitForm()">提交</button>
+      </nz-form-control>
+    </nz-form-item>
+  </form>
+</div>

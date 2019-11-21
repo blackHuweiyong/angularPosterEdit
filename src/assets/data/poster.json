@@ -1,0 +1,9 @@
+{
+  "code": 200,
+  "data": {
+    "left": 300,
+    "top": 300,
+    "isShow": false
+  },
+  "message": "请求成功"
+}
