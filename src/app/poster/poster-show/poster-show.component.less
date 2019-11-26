@@ -1,0 +1,67 @@
+.main-container {
+  box-sizing: border-box;
+  position: relative;
+  background-color: #e8e8e8;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.menu-wrapper {
+  float: left;
+  width: 280px;
+  height: 100vh;
+  .menu-container {
+    height: inherit;
+    .menu-title {
+      height: 80px;
+      text-align: center;
+      line-height: 80px;
+      font-size: 24px;
+    }
+  }
+}
+
+.poster-navbar {
+  padding: 24px 32px;
+  background-color: #fff;
+  line-height: 40px;
+  font-size: 24px;
+  color: #505050;
+  overflow: hidden;
+  -webkit-box-shadow: 0 4px 4px #ccc; 
+  -moz-box-shadow: 0 4px 4px #ccc; 
+  -ms-box-shadow: 0 4px 4px #ccc; 
+  box-shadow: 0 4px 4px #ccc;
+  .admin-header {
+    float: right;
+    margin-right: 40px;
+  }
+}
+.poster-content-container {
+  position: relative;
+  height: -moz-calc(100vh - 87px); 
+  height: -webkit-calc(100vh - 87px); 
+  height: calc(100vh - 87px);
+  padding: 24px 32px;
+  overflow-y: auto;
+  .poster-title {
+    padding: 24px;
+    margin-bottom: 24px;
+    font-size: 24px;
+    background-color: #fff;
+  }
+  .wrap-container {
+    display: flex;
+    background-color: #e8e8e8;
+    .poster-edit-container {
+      width: 608px;
+      background-color: #fff;
+    }
+    .poster-options-container {
+      flex: 1;
+      background-color: #fff;
+      margin-left: 24px;
+    }
+  }
+  
+}

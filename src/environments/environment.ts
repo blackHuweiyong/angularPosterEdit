@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  iconUrl: ''
+  iconUrl: 'http://localhost:9001'
 };
 
 /*
