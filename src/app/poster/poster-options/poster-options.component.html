@@ -41,5 +41,18 @@
         <button nz-button nzType="primary" (click)="submitForm()">提交</button>
       </nz-form-control>
     </nz-form-item>
+    <nz-form-item>
+      <nz-form-control [nzSpan]="7" [nzOffset]="7">
+        <button nz-button nzType="primary" (click)="setSetValue()">填充数据</button>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control [nzSpan]="7" [nzOffset]="7">
+        <button nz-button nzType="primary" (click)="showFormValue()">显示数据</button>
+      </nz-form-control>
+    </nz-form-item>
   </form>
 </div>
+<p>{{getValue()}}</p>
+<ng-content select=".header"></ng-content>
+<ng-content select=".footer"></ng-content>

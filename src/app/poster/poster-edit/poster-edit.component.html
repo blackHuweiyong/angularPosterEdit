@@ -3,7 +3,7 @@
   <nz-step nzTitle="In Progress" nzSubtitle="Left 00:00:08" nzDescription="This is a description."> </nz-step>
   <nz-step nzTitle="Waiting" nzDescription="This is a description."></nz-step>
 </nz-steps>
-<div>
+<div class="drag-none">
   <h2>这是海报组件</h2>
   <div>海报top属: {{posterOption.top}}</div>
   <div>海报left属: {{posterOption.left}}</div>
@@ -12,3 +12,5 @@
 </div>
 <button nz-button nzType="primary" routerLink="/posterOption">Primary</button>
 <div class="poster" ngDraggable>Drag me!</div>
+<div [style.fontSize]="fontSize" [style.color]="'red'">styleBinding</div>
+<div [ngStyle]="{'font-size': isMax ? '24px' : '12px'}">ngStyle-添加判断</div>

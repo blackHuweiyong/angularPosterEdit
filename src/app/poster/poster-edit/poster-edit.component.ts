@@ -11,6 +11,16 @@ import { Poster } from 'src/app/model/poster';
 export class PosterEditComponent implements OnInit {
   posterOption: Poster = new Poster();
 
+  fontSize = "40px";
+
+  isMax = false;
+
+  stringIfy = {
+    name: 1,
+    age: 2,
+    sex: 3
+  };
+
   constructor(
     private posterService: PosterService,
     private message: NzMessageService
@@ -18,6 +28,10 @@ export class PosterEditComponent implements OnInit {
 
   ngOnInit() {
     this.getData(1);
+    console.log(JSON.stringify(this.stringIfy, null, 2));
+    console.dir(this.stringIfy);
+    console.log("%cMy stylish message", "color: red; font-style: italic");
+    console.log("My %cstylish message", "color: red; font-style: italic");
   }
 
   public getData(id: number) {
