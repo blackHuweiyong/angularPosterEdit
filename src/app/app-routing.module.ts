@@ -23,7 +23,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/poster',
+    redirectTo: '/posterShow',
     pathMatch: 'full'
   },
 ];
